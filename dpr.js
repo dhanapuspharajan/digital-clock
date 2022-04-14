@@ -91,7 +91,7 @@ function update(){
    if(wakeuptime == hrs){
     img.height ="300";
        gudtext.innerText = "GOOD MORNING!! WAKE UP !!"
-        img.src = "./images/morning.svg";
+        img.src = "./images/wakeup.png";
         gt.innerText ="GRAB SOME HEALTHY BREAKFAST!!!";
    }
 
@@ -115,19 +115,28 @@ function update(){
        gt.innerText = "CLOSE YOUR EYES AND GO SLEEP";
        gudtext.innerText = "GOOD NIGHT !!";
    }
+  
 
-//    <li id="sel-wakeuptime">Wake up Time:</li>
-//    <li id="sel-lunchtime">Lunch Time:</li>
-//    <li id="sel-naptime">Nap Time:</li>
-//    <li id="sel-nighttime">Night Time:</li>
+   let wakeuptimet =  document.getElementById("setwakeuptime");
+   let breaskfasttimet =document.getElementById("setlunchtime");
 
-    document.getElementById("sel-wakeuptime").innerText ="Wake up Time: "+wakeuptime;
+   let naptimet = document.getElementById("setnaptime");
 
-    document.getElementById("sel-lunchtime").innerText ="Lunch Time: "+breaskfasttime;
+   let nighteupt = document.getElementById("setnighteup");
+   
+let wake = wakeuptimet.options[wakeuptimet.selectedIndex].text;
+let lunch = breaskfasttimet.options[breaskfasttimet.selectedIndex].text;
+let nap = naptimet.options[naptimet.selectedIndex].text;
+let night = nighteupt.options[nighteupt.selectedIndex].text;
 
-    document.getElementById("sel-naptime").innerText ="Nap Time: "+naptime;
+    document.getElementById("sel-wakeuptime").innerText ="Wake up Time: "+ wake;
 
-    document.getElementById("sel-nighttime").innerText ="Night Time: "+nighteup;
+    
+    document.getElementById("sel-lunchtime").innerText ="Lunch Time: "+lunch;
+
+    document.getElementById("sel-naptime").innerText ="Nap Time: "+nap;
+
+    document.getElementById("sel-nighttime").innerText ="Night Time: "+night;
 
 }
 
